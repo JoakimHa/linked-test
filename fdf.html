@@ -15,11 +15,12 @@ body {
 div.page {
 height: 100vh;
 display: grid;
+grid-template-columns: 1fr 10fr;
 grid-template-rows: 1fr 10fr 10fr 10fr;
-	grid-template-areas: 'Back Back'
+	grid-template-areas: 'Menu Back'
 					'Header Header'
-					'Menu Main'
-				'Menu Footer'
+					'Main Main'
+				'Footer Footer'
 }
 a {
     font-size: xx-large;
@@ -34,7 +35,7 @@ div.Header {
 	grid-area: Header;
 }
 div.Menu {
-background-color: tomato;
+background-color: Black;
 grid-area: Menu;
 }
 div.Main {
@@ -45,7 +46,7 @@ div.Footer {
 background-color: violet;
 grid-area: Footer;
 }
-@media	only screen and (max-width: 700px) {
+@media	only screen and (max-width: 300px) {
 div.page {
 grid-template-rows: 1fr;
 	grid-template-areas: 'Back'
@@ -62,8 +63,14 @@ grid-template-rows: 1fr;
     <a href="https://joakimha.github.io/test3/fsd.html">back</a>
     <div class="Header">TestHeader</div>
     <div class="Menu">TestMenu</div>
-    <div class="Main">testMain</div>
+    <div class="Main" onclick="MenuOpen">testMain</div>
     <div class="Footer">testFooter</div>
 </div>
+<script>
+
+
+
+</script>
+
 </body>
 </html>
